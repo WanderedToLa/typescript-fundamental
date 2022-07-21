@@ -12,15 +12,15 @@ arr.push('hi');
 const items: string[] = [];
 // items.push(10);
 
-// 튜플
-const address: [string, number] = ['판교', 40];
+// 튜플 -> 모든 인덱스에 타입 정의
+const address: [string, number] = ['Ansan', 25];
 
 // 객체
 const obj: object = {};
 // obj.a = 10;
 
 // 타입 객체
-const person: { age: number; name: string } = { age: 100, name: 'Capt' };
+const person: { age: number; name: string } = { age: 100, name: 'Wooseok' };
 person.age = 101;
 
 // 진위값
