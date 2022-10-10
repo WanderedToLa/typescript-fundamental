@@ -8,5 +8,3 @@
 2. npm i typescript
 3. 터미널에 tsc index.ts 실행
 4. index.js 로 변경 확인
-
-dfd
