@@ -1,8 +1,14 @@
-let todoItems;
+interface TodoItemList {
+  id: number;
+  title: string;
+  done: boolean;
+}
+
+let todoItems: TodoItemList[];
 
 // api
-function fetchTodoItems() {
-  const todos = [
+function fetchTodoItems(): TodoItemList[] {
+  const todos: TodoItemList[] = [
     { id: 1, title: "안녕", done: false },
     { id: 2, title: "타입", done: false },
     { id: 3, title: "스크립트", done: false },
@@ -38,12 +44,13 @@ function showCompleted() {
   return todoItems.filter((item) => item.done);
 }
 
-// TODO: 아래 함수의 내용을 채워보세요. 아래 함수는 `addTodo()` 함수를 이용하여 2개의 새 할 일을 추가하는 함수입니다.
-function addTwoTodoItems() {
-  // addTodo() 함수를 두 번 호출하여 todoItems에 새 할 일이 2개 추가되어야 합니다.
-}
+/**
+ * @TODO addTodo()를 이용해 2개의 할 일 추가
+ */
 
-// NOTE: 유틸 함수
+function addTwoTodoItems() {}
+
+// Utils
 function log() {
   console.log(todoItems);
 }
