@@ -8,7 +8,7 @@ genericType<number>(999);
 genericType<boolean>(false);
 
 /**
- * @description 기존 타입의 단점은 다른 타입을 활용하는데 있어서 제한점이 생김 따라서 Generic 사용 유지 보수측면에서 불리함
+ * @description 기존 타입의 단점은 다른 타입을 활용하는데 있어서 제한점이 생김 따라서 Generic사용 기존타입은 유지 보수측면에서 불리함
  */
 
 function genericText<T>(text: T): T {
@@ -16,8 +16,10 @@ function genericText<T>(text: T): T {
   return text;
 }
 
-genericText<string>("hi");
+const str = genericText<string>("hi");
+str.split("");
 genericText<number>(10);
+const condition = genericText<boolean>(false);
 
 function unionText(text: number | string) {
   console.log(text);
