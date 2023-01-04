@@ -8,3 +8,8 @@
 2. `npm i typescript`
 3. 터미널에 tsc index.ts 실행
 4. index.js 로 변경 확인
+
+## 타입스크립트 왜 쓸까?
+
+- [타입스크립트 공식문서 핸드북](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)
+- 공식 문서의 내용을 정리한 글 입니다.
