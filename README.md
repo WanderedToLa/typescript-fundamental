@@ -11,5 +11,4 @@
 
 ## 타입스크립트 왜 쓸까?
 
-- [타입스크립트 공식문서 핸드북](https://www.typescriptlang.org/docs/handbook/2/basic-types.html)
-- 공식 문서의 내용을 정리한 글 입니다.
+- [타입스크립트 공식문서 핸드북](https://www.typescriptlang.org/docs/handbook/2/basic-types.html) 공식 문서 내용을 정리했습니다.
