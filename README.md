@@ -49,3 +49,75 @@
     이러한 방법은 코드를 실행하기전 예측을 어렵게 만듭니다.
 
     이러한 점을 방지하기 위하여 정적 타입 시스템을 사용 할 수 있습니다
+
+- ### Static Type Check
+
+  - 누구나 그렇듯이 에러를 보는일은 즐겁지 않습니다. 코드를 수정하고 오류를 즉시 발견하면 좋겠지만  
+    모든 일이 그렇지만은 않듯이, 충분한 테스트를 거치지 않아 잠재적인 오류를 발견하지 못할 수도 있습니다.  
+    코드를 실행하기전 오류를 잡아줄 수 있는것이 바로 정적 타입 체크입니다.
+
+    ```javascript
+    const message = "Hello World!";
+
+    message();
+    //This expression is not callable. Type 'String' has no call signatures.
+    ```
+
+    위의 예시를 Typescript 로 실행한다면 위와 같은 에러를 미리 볼 수 있고 방지하게 됩니다.
+
+- ### Non-Exeption Failures
+
+  - Javascript 의 경우 객체의 존재하지 않는 값에 대해 접근할 경우 오류가 아닌 `undefined`를 반환 합니다.
+
+  ```javascript
+  //javascript
+  const user = {
+    name: "Wooseok",
+    age: 24,
+  };
+  user.location; // undefined
+
+  //typescript
+  const user = {
+    name: "Wooseok",
+    age: 24,
+  };
+  user.location; //Property 'location' does not exist on type '{ name: string; age: number; }'.
+  ```
+
+  이 외에도 겉으로 잘 드러나지 않는 버그들을 발견합니다.  
+  예를 들면 오타나,
+
+  ```javascript
+  const announcement = "Hello World!";
+
+  // 오타가 있는지 알아보기 쉬운가요?
+  announcement.toLocaleLowercase();
+  announcement.toLocalLowerCase();
+
+  // 아마도 이렇게 적었을 겁니다
+  announcement.toLocaleLowerCase();
+  ```
+
+  호출되지 않은 함수
+
+  ```javascript
+  function flipCoin() {
+    // 본래 의도는 Math.random()
+    return Math.random < 0.5;
+    // Operator '<' cannot be applied to types '() => number' and 'number'.
+  }
+  ```
+
+  기본적인 논리 오류 등이 있습니다.
+
+  ```javascript
+  const value = Math.random() < 0.5 ? "a" : "b";
+
+  if (value !== "a") {
+    // ...
+  } else if (value === "b") {
+    //This condition will always return 'false' since the types '"a"' and '"b"' have no overlap.
+    // 이 블록은 실행되지 않겠군요
+  }
+  ```
