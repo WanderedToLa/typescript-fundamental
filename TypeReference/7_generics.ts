@@ -17,7 +17,7 @@ function genericText<T>(text: T): T {
 }
 
 const strGeneric = genericText<string>("hi");
-str.split("");
+strGeneric.split("");
 genericText<number>(10);
 const condition = genericText<boolean>(false);
 
