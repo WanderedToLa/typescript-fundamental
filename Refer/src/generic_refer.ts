@@ -1,21 +1,21 @@
-interface SelectedOptions {
-  value: string | number;
+interface SelectedOptions<T> {
+  value: T;
   selected: boolean;
 }
 
-const emails: SelectedOptions[] = [
+const emails: SelectedOptions<string>[] = [
   { value: "naver.com", selected: true },
   { value: "gmail.com", selected: false },
   { value: "hanmail.net", selected: false },
 ];
 
-const numberOfProducts: SelectedOptions[] = [
+const numberOfProducts: SelectedOptions<number>[] = [
   { value: 1, selected: true },
   { value: 2, selected: false },
   { value: 3, selected: false },
 ];
 
-function createDropdownItem(item: SelectedOptions) {
+function createDropdownItem(item: SelectedOptions<string | number>) {
   const option = document.createElement("option");
   option.value = item.value.toString();
   option.innerText = item.value.toString();
@@ -24,7 +24,7 @@ function createDropdownItem(item: SelectedOptions) {
 }
 
 // NOTE: 이메일 드롭 다운 아이템 추가
-emails.forEach(function (email) {
+emails.forEach((email) => {
   const item = createDropdownItem(email);
   const selectTag = document.querySelector("#email-dropdown");
   selectTag.appendChild(item);

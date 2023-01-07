@@ -16,7 +16,7 @@ function genericText<T>(text: T): T {
   return text;
 }
 
-const str = genericText<string>("hi");
+const strGeneric = genericText<string>("hi");
 str.split("");
 genericText<number>(10);
 const condition = genericText<boolean>(false);
@@ -29,3 +29,15 @@ function unionText(text: number | string) {
 
 unionText(10);
 unionText("hi");
+
+/**
+ * @description Interface Generic 적용하기
+ */
+interface DropdownGeneric<T> {
+  value: T;
+  selected: boolean;
+}
+const dropDownObj: DropdownGeneric<number> = {
+  value: 24,
+  selected: false,
+};
