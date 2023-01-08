@@ -41,3 +41,21 @@ const dropDownObj: DropdownGeneric<number> = {
   value: 24,
   selected: false,
 };
+
+/**
+ * @description Generic Type 제한하기
+ */
+
+function GenericTypeGuard<T>(text: T[]) {
+  console.log(text.length);
+  return text;
+}
+GenericTypeGuard<string>(["hi", "abc"]);
+
+interface ExtandType {
+  length: number;
+}
+
+function textLength<T>(text: T): T {
+  return text;
+}
