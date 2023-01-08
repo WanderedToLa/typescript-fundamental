@@ -56,6 +56,9 @@ interface ExtandType {
   length: number;
 }
 
-function textLength<T>(text: T): T {
+function textLength<T extends ExtandType>(text: T): T {
+  text.length;
   return text;
 }
+// textLength(10);
+// textLength({ hi: 10 })
