@@ -44,7 +44,7 @@ var obj2 = {
   cssFile: /\.css$/,
   jsFile: /\.js$/,
 };
-Object.keys(obj).forEach((v) => {});
+Object.keys(obj2).forEach((v) => {});
 
 // 인터페이스 확장
 interface Person {
