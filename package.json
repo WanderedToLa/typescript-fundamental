@@ -1,0 +1,23 @@
+{
+  "name": "typescript-syntax",
+  "version": "1.0.0",
+  "description": "- typescript study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WanderedToLa/typescript-syntax.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WanderedToLa/typescript-syntax/issues"
+  },
+  "homepage": "https://github.com/WanderedToLa/typescript-syntax#readme",
+  "dependencies": {
+    "typescript": "^4.9.4"
+  }
+}
