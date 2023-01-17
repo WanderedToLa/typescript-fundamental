@@ -1,5 +1,6 @@
 try {
+  //...
 } catch (error) {
-  // error.message
+  // error.message -> unknown
   (error as Error).message;
 }
