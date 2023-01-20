@@ -1,8 +1,12 @@
 interface ForEachArr<T> {
   forEach(callback: (value: T) => void): void;
+  map<U>(callback: (value: T) => U): U[];
 }
 
 const forEachArr: ForEachArr<number> = [1, 2, 3];
+
+const mapForEachNumberArr = forEachArr.map((v) => v + 1);
+const mapString = forEachArr.map((v) => v.toString());
 
 forEachArr.forEach((items) => {
   console.log(items);
