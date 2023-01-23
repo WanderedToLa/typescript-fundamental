@@ -14,6 +14,7 @@ type Human = ExtractC<Animal, "Person">; // 'Person'
 
 type ExcludeAdress = Exclude<keyof ProfileObject, "address">;
 
+//S extends keyof any -> S 는 string | number | symbol
 type CustomOmit<T, U extends keyof any> = Pick<T, Exclude<keyof T, U>>;
 const OWooseok: CustomOmit<ProfileObject, "address"> = {
   name: "wooseok",
