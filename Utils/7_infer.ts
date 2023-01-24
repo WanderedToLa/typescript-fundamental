@@ -6,8 +6,8 @@ function zip(
   return { x, y, z };
 }
 
-type zipParams = Parameters<typeof zip>;
-type first = zipParams[0];
+type zipParams = Parameters<typeof zip>; // [x:number , y:string , z: boolean]
+type first = zipParams[0]; // number
 
 type CustomParameters<T extends (...args: any) => any> = T extends (
   ...args: infer A
