@@ -4,7 +4,7 @@
 
 import type { Equal, Expect } from "./utils";
 
-type If<C, T, F> = C extends true ? T : F;
+type If<C extends boolean, T, F> = C extends true ? T : F;
 
 type cases = [
   Expect<Equal<If<true, "a", "b">, "a">>,
