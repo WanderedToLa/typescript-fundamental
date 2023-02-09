@@ -13,5 +13,3 @@ type cases = [
     Equal<MyExclude<string | number | (() => void), Function>, string | number>
   >
 ];
-
-test
