@@ -22,3 +22,7 @@ type CustomParametersReturn<T extends (...args: any) => any> = T extends (
   : never;
 type CzipParams = CustomParameters<typeof zip>;
 type CzipReturn = CustomParametersReturn<typeof zip>;
+
+
+type abc = abcinfer<'FooBarBaz'>
+type abcinfer<T extends string> = T extends `${infer A}${infer B}${infer C}` ? `${C}` : never
