@@ -25,4 +25,4 @@ type CzipReturn = CustomParametersReturn<typeof zip>;
 
 
 type abc = abcinfer<'FooBarBaz'>
-type abcinfer<T extends string> = T extends `${infer A}${infer B}${infer C}` ? `${C}` : never
+type abcinfer<T extends string> = T extends `${infer A}${infer B}` ? B : never
