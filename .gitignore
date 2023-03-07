@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,react,nextjs
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode,react,nextjs
 
+# Webstorm
+/.idea
+
 ### NextJS ###
 # Dependencies
 /node_modules
